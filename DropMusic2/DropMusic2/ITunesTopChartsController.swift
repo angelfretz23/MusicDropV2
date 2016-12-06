@@ -8,66 +8,31 @@
 
 import Foundation
 
-class ItunesSearchControllers{
-    static let baseURL = URL(string: "https://itunes.apple.com/search?")
-    static var parameters = ["entity": "song", "limit": "25"]
+class TopChartsController{
     
-    static var songs: [DMSong] = []{
-        didSet{
-            makeAlbumsFromSongs()
-        }
-    }
+    let baseURL = URL(string: "https://itunes.apple.com/us/rss/topsongs/limit=25/json")
     
-    static var arrayOfItuneObjects: [DMMediaItem] = []
-    
-    static func fetchSongs(with term: String, completion: @escaping (_ songs: [DMSong]?)-> Void){
-        guard let url = baseURL else { completion(nil); return }
+    func fetchSongs(completion: @escaping (_ songs: [DMSong]) -> Void){
+        guard let url = baseURL else { return }
         
-        parameters["term"] = term
-        
-        NetworkController.performRequest(for: url, httpMethodString: .get, urlParameters: parameters, body: nil) { (data, error) in
+        NetworkController.performRequest(for: url, httpMethodString: "GET") { (data, error) in
             guard let data = data,
-                let responseDataString = String.init(data: data, encoding: String.Encoding.utf8) else { completion(nil); return }
+                let responseDataString = String.init(data: data, encoding: String.Encoding.utf8) else { completion([]); return }
             
             if error != nil {
-                print(error?.localizedDescription ?? "")
+                print("Error: \(error?.localizedDescription)")
             } else if responseDataString.contains("error") {
                 print("Error: \(responseDataString)")
             }
             
-            guard let jsonDictionary = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any],
-                let resultsDictinary = jsonDictionary["results"] as? [[String:Any]] else { completion(nil); return }
+            let jsonFromData = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String:Any]
+            guard let feedDictionary = jsonFromData?["feed"] as? [String: Any] else { return }
+            guard let topSongsArrayOfDictionaries = feedDictionary["entry"] as? [[String: Any]] else {completion([]); return }
             
-//            let songs = resultsDictinary.flatMap{ Song(dictionaryItunesSearch: $0) }
-            self.songs = songs
-
+            let songs = topSongsArrayOfDictionaries.flatMap{Song(dictionaryTopCharts: $0)}
             DispatchQueue.main.async {
                 completion(songs)
             }
         }
     }
-    
-    static func makeAlbumsFromSongs(){
-        arrayOfItuneObjects = []
-        
-        if songs.count > 10 {
-            for x in 0...9{
-                let song = songs[x]
-                arrayOfItuneObjects.append(song as DMMediaItem)
-            }
-        } else {
-            for song in songs{
-                arrayOfItuneObjects.append(song as DMMediaItem)
-            }
-        }
-        
-        for song in songs{
-            print(song.imageURL)
-            let albumFromSong = Album(withSong: song) as DMMediaItem
-            if !arrayOfItuneObjects.contains(where: {$0 == albumFromSong}) {
-                arrayOfItuneObjects.append(albumFromSong)
-            }
-        }
-    }
-    
 }
