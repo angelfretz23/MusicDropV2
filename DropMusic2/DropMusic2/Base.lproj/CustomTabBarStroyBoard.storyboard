@@ -22,6 +22,7 @@
                         <segue destination="aqy-cT-rcp" kind="relationship" relationship="viewControllers" id="cfy-Yd-FEp"/>
                         <segue destination="ErG-BJ-K9J" kind="relationship" relationship="viewControllers" id="6wl-fE-MSq"/>
                         <segue destination="lHe-wX-udp" kind="relationship" relationship="viewControllers" id="zHi-Lr-UVG"/>
+                        <segue destination="7M4-yh-ytE" kind="relationship" relationship="viewControllers" id="9rt-AF-q63"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIY-x0-bwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,6 +59,16 @@
             </objects>
             <point key="canvasLocation" x="-46" y="1319"/>
         </scene>
+        <!--ProfileStoryBoard-->
+        <scene sceneID="Rra-ih-ojp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileStoryBoard" id="FNs-Pw-Pb8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YDk-mC-l8s"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ex8-nn-e4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="1320"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="635-rc-vVO">
             <objects>
@@ -75,7 +86,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fun-fM-T1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1810" y="802"/>
+            <point key="canvasLocation" x="-1810" y="780"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZYz-bL-0eG">
@@ -115,10 +126,30 @@
             </objects>
             <point key="canvasLocation" x="-46" y="780"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pwL-Mr-vtS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7M4-yh-ytE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Profile" id="JBO-uH-K64"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lLS-By-08x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FNs-Pw-Pb8" kind="relationship" relationship="rootViewController" id="SjW-Vu-Dlo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xc-Aw-opj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="780"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AddMusic-1" width="25" height="25"/>
         <image name="Globe" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
+        <image name="Profile" width="25" height="25"/>
     </resources>
 </document>
