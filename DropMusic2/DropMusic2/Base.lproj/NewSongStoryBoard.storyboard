@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--New Song Table View Controller-->
         <scene sceneID="jJX-H8-zVW">
             <objects>
-                <tableViewController id="SOZ-a5-a5n" sceneMemberID="viewController">
+                <tableViewController id="SOZ-a5-a5n" customClass="NewSongTableViewController" customModule="DropMusic2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="9jA-cV-4yG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,15 +117,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="FPO-ck-khq"/>
+                    <connections>
+                        <outlet property="albumCoverImageView" destination="Wj0-il-gcp" id="NHh-ab-FWe"/>
+                        <outlet property="artistNameLabel" destination="dyq-oa-HJf" id="dgC-J3-CLf"/>
+                        <outlet property="descriptionTextView" destination="QqQ-ZU-LRC" id="c9Y-7Q-sVs"/>
+                        <outlet property="locationSwitch" destination="e94-3F-G6y" id="Xhq-Y3-0GM"/>
+                        <outlet property="newSongLabel" destination="g1G-cp-7GB" id="C2W-eV-NeK"/>
+                        <outlet property="songNameLabel" destination="bJu-Xd-ipz" id="U8F-jb-y3E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zH-uL-U4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015.2" y="150.67466266866569"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Itunes Search Table View Controller-->
         <scene sceneID="pRi-MP-tHc">
             <objects>
-                <tableViewController id="6DN-Dc-Ed1" sceneMemberID="viewController">
+                <tableViewController id="6DN-Dc-Ed1" customClass="ItunesSearchTableViewController" customModule="DropMusic2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="49b-ML-FRV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

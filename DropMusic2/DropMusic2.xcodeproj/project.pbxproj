@@ -14,6 +14,10 @@
 		0F0A1AB81DF660BD007DCC8A /* MapViewStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AB71DF660BD007DCC8A /* MapViewStoryBoard.storyboard */; };
 		0F0A1ABA1DF67184007DCC8A /* ProfileStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AB91DF67184007DCC8A /* ProfileStoryBoard.storyboard */; };
 		0F0A1ABC1DF77940007DCC8A /* NewSongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1ABB1DF77940007DCC8A /* NewSongTableViewController.swift */; };
+		0F0A1ABE1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1ABD1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift */; };
+		0F0A1AC01DF77E8C007DCC8A /* ITunesTopChartsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1ABF1DF77E8C007DCC8A /* ITunesTopChartsController.swift */; };
+		0F0A1AC21DF77E9E007DCC8A /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AC11DF77E9E007DCC8A /* NetworkController.swift */; };
+		0F0A1AC41DF7815B007DCC8A /* DataTypeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AC31DF7815B007DCC8A /* DataTypeModifier.swift */; };
 		0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB501DEC0E65007A73EB /* DMAlbum.swift */; };
 		0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB541DEC0EBF007A73EB /* DMMediaItem.swift */; };
 		0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB561DEC1689007A73EB /* DMEcho.swift */; };
@@ -35,6 +39,10 @@
 		0F0A1AB71DF660BD007DCC8A /* MapViewStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewStoryBoard.storyboard; sourceTree = "<group>"; };
 		0F0A1AB91DF67184007DCC8A /* ProfileStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryBoard.storyboard; sourceTree = "<group>"; };
 		0F0A1ABB1DF77940007DCC8A /* NewSongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSongTableViewController.swift; sourceTree = "<group>"; };
+		0F0A1ABD1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesSearchTableViewController.swift; sourceTree = "<group>"; };
+		0F0A1ABF1DF77E8C007DCC8A /* ITunesTopChartsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesTopChartsController.swift; sourceTree = "<group>"; };
+		0F0A1AC11DF77E9E007DCC8A /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		0F0A1AC31DF7815B007DCC8A /* DataTypeModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeModifier.swift; sourceTree = "<group>"; };
 		0F17DB501DEC0E65007A73EB /* DMAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAlbum.swift; sourceTree = "<group>"; };
 		0F17DB541DEC0EBF007A73EB /* DMMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMediaItem.swift; sourceTree = "<group>"; };
 		0F17DB561DEC1689007A73EB /* DMEcho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMEcho.swift; sourceTree = "<group>"; };
@@ -78,6 +86,7 @@
 				0F17DB5A1DEC192F007A73EB /* DMComment.swift */,
 				0F0A1AB11DF63607007DCC8A /* DMPost.swift */,
 				0F17DB581DEC174B007A73EB /* DMUser.swift */,
+				0F0A1AC31DF7815B007DCC8A /* DataTypeModifier.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -116,6 +125,8 @@
 		0F17DB7E1DED2A94007A73EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F0A1ABF1DF77E8C007DCC8A /* ITunesTopChartsController.swift */,
+				0F0A1AC11DF77E9E007DCC8A /* NetworkController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 		0F17DB811DED2BFD007A73EB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F0A1ABD1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift */,
 				0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */,
 				0F0A1ABB1DF77940007DCC8A /* NewSongTableViewController.swift */,
 			);
@@ -239,14 +251,18 @@
 				0F0A1AB21DF63607007DCC8A /* DMPost.swift in Sources */,
 				0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */,
 				0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */,
+				0F0A1AC01DF77E8C007DCC8A /* ITunesTopChartsController.swift in Sources */,
 				0FDCC5331DEAEEA100B99359 /* DMSong.swift in Sources */,
 				0F17DB801DED2BF9007A73EB /* FeedTableViewController.swift in Sources */,
 				0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */,
 				0F17DB5B1DEC192F007A73EB /* DMComment.swift in Sources */,
 				0F0A1ABC1DF77940007DCC8A /* NewSongTableViewController.swift in Sources */,
 				0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */,
+				0F0A1ABE1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift in Sources */,
 				0F0A1AAA1DF6352C007DCC8A /* FeedTableViewCell.swift in Sources */,
+				0F0A1AC21DF77E9E007DCC8A /* NetworkController.swift in Sources */,
 				0F17DB591DEC174B007A73EB /* DMUser.swift in Sources */,
+				0F0A1AC41DF7815B007DCC8A /* DataTypeModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
