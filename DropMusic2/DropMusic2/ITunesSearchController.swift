@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ItunesSearchControllers{
+class ItunesSearchController{
     let baseURL = URL(string: "https://itunes.apple.com/search?")
     var parameters = ["entity": "song", "limit": "25"]
     

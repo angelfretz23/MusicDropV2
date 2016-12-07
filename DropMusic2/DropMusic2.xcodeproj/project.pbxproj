@@ -19,6 +19,10 @@
 		0F0A1AC21DF77E9E007DCC8A /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AC11DF77E9E007DCC8A /* NetworkController.swift */; };
 		0F0A1AC41DF7815B007DCC8A /* DataTypeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AC31DF7815B007DCC8A /* DataTypeModifier.swift */; };
 		0F0A1AC61DF786AB007DCC8A /* ITunesTopChartsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AC51DF786AB007DCC8A /* ITunesTopChartsController.swift */; };
+		0F0A1AC81DF78E14007DCC8A /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AC71DF78E14007DCC8A /* ImageController.swift */; };
+		0F0A1ACA1DF78E94007DCC8A /* GCDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AC91DF78E94007DCC8A /* GCDController.swift */; };
+		0F0A1ACC1DF8A311007DCC8A /* TopChartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1ACB1DF8A311007DCC8A /* TopChartsTableViewCell.swift */; };
+		0F0A1ACE1DF8BA4B007DCC8A /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1ACD1DF8BA4B007DCC8A /* ResultsTableViewController.swift */; };
 		0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB501DEC0E65007A73EB /* DMAlbum.swift */; };
 		0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB541DEC0EBF007A73EB /* DMMediaItem.swift */; };
 		0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB561DEC1689007A73EB /* DMEcho.swift */; };
@@ -45,6 +49,10 @@
 		0F0A1AC11DF77E9E007DCC8A /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		0F0A1AC31DF7815B007DCC8A /* DataTypeModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeModifier.swift; sourceTree = "<group>"; };
 		0F0A1AC51DF786AB007DCC8A /* ITunesTopChartsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesTopChartsController.swift; sourceTree = "<group>"; };
+		0F0A1AC71DF78E14007DCC8A /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		0F0A1AC91DF78E94007DCC8A /* GCDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDController.swift; sourceTree = "<group>"; };
+		0F0A1ACB1DF8A311007DCC8A /* TopChartsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopChartsTableViewCell.swift; sourceTree = "<group>"; };
+		0F0A1ACD1DF8BA4B007DCC8A /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		0F17DB501DEC0E65007A73EB /* DMAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAlbum.swift; sourceTree = "<group>"; };
 		0F17DB541DEC0EBF007A73EB /* DMMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMediaItem.swift; sourceTree = "<group>"; };
 		0F17DB561DEC1689007A73EB /* DMEcho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMEcho.swift; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 		0F0A1AA81DF634DA007DCC8A /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0F0A1ACB1DF8A311007DCC8A /* TopChartsTableViewCell.swift */,
 				0F0A1AA91DF6352C007DCC8A /* FeedTableViewCell.swift */,
 			);
 			name = "Custom Cells";
@@ -129,6 +138,8 @@
 			children = (
 				0F0A1ABF1DF77E8C007DCC8A /* ITunesSearchController.swift */,
 				0F0A1AC51DF786AB007DCC8A /* ITunesTopChartsController.swift */,
+				0F0A1AC71DF78E14007DCC8A /* ImageController.swift */,
+				0F0A1AC91DF78E94007DCC8A /* GCDController.swift */,
 				0F0A1AC11DF77E9E007DCC8A /* NetworkController.swift */,
 			);
 			name = Controllers;
@@ -137,9 +148,10 @@
 		0F17DB811DED2BFD007A73EB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0F0A1ABD1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift */,
 				0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */,
 				0F0A1ABB1DF77940007DCC8A /* NewSongTableViewController.swift */,
+				0F0A1ABD1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift */,
+				0F0A1ACD1DF8BA4B007DCC8A /* ResultsTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -255,6 +267,7 @@
 				0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */,
 				0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */,
 				0F0A1AC01DF77E8C007DCC8A /* ITunesSearchController.swift in Sources */,
+				0F0A1ACE1DF8BA4B007DCC8A /* ResultsTableViewController.swift in Sources */,
 				0FDCC5331DEAEEA100B99359 /* DMSong.swift in Sources */,
 				0F17DB801DED2BF9007A73EB /* FeedTableViewController.swift in Sources */,
 				0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */,
@@ -262,9 +275,12 @@
 				0F0A1ABC1DF77940007DCC8A /* NewSongTableViewController.swift in Sources */,
 				0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */,
 				0F0A1ABE1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift in Sources */,
+				0F0A1ACC1DF8A311007DCC8A /* TopChartsTableViewCell.swift in Sources */,
 				0F0A1AAA1DF6352C007DCC8A /* FeedTableViewCell.swift in Sources */,
 				0F0A1AC21DF77E9E007DCC8A /* NetworkController.swift in Sources */,
 				0F17DB591DEC174B007A73EB /* DMUser.swift in Sources */,
+				0F0A1ACA1DF78E94007DCC8A /* GCDController.swift in Sources */,
+				0F0A1AC81DF78E14007DCC8A /* ImageController.swift in Sources */,
 				0F0A1AC61DF786AB007DCC8A /* ITunesTopChartsController.swift in Sources */,
 				0F0A1AC41DF7815B007DCC8A /* DataTypeModifier.swift in Sources */,
 			);

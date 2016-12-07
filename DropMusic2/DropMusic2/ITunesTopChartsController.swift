@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TopChartsController{
+class ITunesTopChartsController{
     
     let baseURL = URL(string: "https://itunes.apple.com/us/rss/topsongs/limit=25/json")
     
