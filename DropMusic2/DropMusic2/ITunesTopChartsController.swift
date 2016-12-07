@@ -15,7 +15,7 @@ class TopChartsController{
     func fetchSongs(completion: @escaping (_ songs: [DMSong]) -> Void){
         guard let url = baseURL else { return }
         
-        NetworkController.performRequest(for: url, httpMethodString: "GET") { (data, error) in
+        NetworkController.performRequest(for: url, httpMethodString: .get) { (data, error) in
             guard let data = data,
                 let responseDataString = String.init(data: data, encoding: String.Encoding.utf8) else { completion([]); return }
             
@@ -29,7 +29,7 @@ class TopChartsController{
             guard let feedDictionary = jsonFromData?["feed"] as? [String: Any] else { return }
             guard let topSongsArrayOfDictionaries = feedDictionary["entry"] as? [[String: Any]] else {completion([]); return }
             
-            let songs = topSongsArrayOfDictionaries.flatMap{Song(dictionaryTopCharts: $0)}
+            let songs = topSongsArrayOfDictionaries.flatMap{ DMSong(dictionaryTopCharts: $0)}
             DispatchQueue.main.async {
                 completion(songs)
             }

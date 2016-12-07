@@ -9,6 +9,12 @@
 import Foundation
 
 protocol DMMediaItem{
-    var storeID: Double { get set }
+    var storeID: String { get set }
     var mediaType: String { get }
+    
+    func isEqualTo(other: DMMediaItem) -> Bool
+}
+
+func ==(left: DMMediaItem, right: DMMediaItem) -> Bool{
+    return left.storeID == right.storeID
 }

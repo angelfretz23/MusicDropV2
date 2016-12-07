@@ -38,7 +38,7 @@ class ItunesSearchControllers{
             guard let jsonDictionary = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any],
                 let resultsDictinary = jsonDictionary["results"] as? [[String:Any]] else { completion(nil); return }
             
-//            let songs = resultsDictinary.flatMap{ Song(dictionaryItunesSearch: $0) }
+            let songs = resultsDictinary.flatMap{ DMSong(dictionaryItunesSearch: $0) }
             self.songs = songs
 
             DispatchQueue.main.async {
@@ -62,8 +62,7 @@ class ItunesSearchControllers{
         }
         
         for song in songs{
-            print(song.imageURL)
-            let albumFromSong = Album(withSong: song) as DMMediaItem
+            let albumFromSong = DMAlbum(withSong: song) as DMMediaItem
             if !arrayOfItuneObjects.contains(where: {$0 == albumFromSong}) {
                 arrayOfItuneObjects.append(albumFromSong)
             }
