@@ -29,7 +29,10 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableViewHeader()
-        setupSerachController()
+        setupSearchController()
+        
+        searchController?.searchBar.delegate = self
+        searchController?.delegate = self
         
         itunesTopChartsContoller.fetchSongs { (songs) in
             self.songs = songs
@@ -87,7 +90,7 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     // MARK: - SearchController
-    func setupSerachController(){
+    func setupSearchController(){
         
         let resultsTVC = UIStoryboard.init(name: "NewSongStoryBoard", bundle: nil).instantiateViewController(withIdentifier: "resultsTVC")
         
@@ -99,8 +102,6 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
         searchController.searchBar.placeholder = "Search iTunes"
         searchController.dimsBackgroundDuringPresentation = true
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.delegate = self
-        searchController.delegate = self
         
         definesPresentationContext = true
     }
@@ -152,7 +153,8 @@ extension ItunesSearchTableViewController: UISearchControllerDelegate{
 
 extension ItunesSearchTableViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let term = searchBar.text, let resultsTVC = searchController?.searchResultsController as? ResultsTableViewController else { return }
+        guard let term = searchBar.text else { return }
+        guard let resultsTVC = searchController?.searchResultsController as? ResultsTableViewController else { print("nil"); return }
         
         itunesSearchController.fetchSongs(with: term){ (songs) in
             resultsTVC.mediaItems = self.itunesSearchController.arrayOfItuneObjects

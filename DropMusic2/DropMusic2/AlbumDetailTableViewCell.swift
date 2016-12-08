@@ -9,16 +9,16 @@
 import UIKit
 
 class AlbumDetailTableViewCell: UITableViewCell {
+    @IBOutlet weak var trackNumberLabel: UILabel!
+    @IBOutlet weak var songTitleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func updateWith(song: DMSong, at row: Int){
+        trackNumberLabel.text = "\(row)"
+        songTitleLabel.text = song.title
     }
 
 }

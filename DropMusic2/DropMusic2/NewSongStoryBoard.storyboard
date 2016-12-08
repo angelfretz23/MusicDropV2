@@ -133,11 +133,11 @@
             </objects>
             <point key="canvasLocation" x="1015.2" y="150.67466266866569"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Results Table View Controller-->
         <scene sceneID="idn-bB-9gd">
             <objects>
-                <tableViewController storyboardIdentifier="resultsTVC" id="7Rq-ij-Qfc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RVf-V5-sFg">
+                <tableViewController storyboardIdentifier="resultsTVC" id="7Rq-ij-Qfc" customClass="ResultsTableViewController" customModule="DropMusic2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="RVf-V5-sFg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -325,7 +325,7 @@
                                 <rect key="frame" x="0.0" y="203" width="375" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" id="2Es-Mo-kOJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumDetailCell" id="2Es-Mo-kOJ" customClass="AlbumDetailTableViewCell" customModule="DropMusic2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Es-Mo-kOJ" id="YOm-MN-UII">
@@ -356,6 +356,10 @@
                                                 <constraint firstItem="3gx-i4-BqL" firstAttribute="leading" secondItem="YOm-MN-UII" secondAttribute="leadingMargin" id="tbL-4M-NTt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="songTitleLabel" destination="rJb-gz-E57" id="eup-ze-lzA"/>
+                                            <outlet property="trackNumberLabel" destination="3gx-i4-BqL" id="VBi-9G-RnZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

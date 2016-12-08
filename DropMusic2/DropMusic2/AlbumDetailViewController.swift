@@ -28,7 +28,6 @@ class AlbumDetailViewController: UIViewController {
             }
             //updateWith(album: album)
         }
-        
     }
     
     var album: DMAlbum?{
@@ -42,16 +41,6 @@ class AlbumDetailViewController: UIViewController {
     let albumController = AlbumController()
     
     weak var delegate: AlbumDetailViewControllerDelegate?
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func updateWith(album: DMAlbum){
         albumNameLabel.text = album.title
@@ -65,11 +54,21 @@ class AlbumDetailViewController: UIViewController {
 
 extension AlbumDetailViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return album?.songs?.count ?? 0
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "albumDetailCell", for: indexPath) as? AlbumDetailTableViewCell
         
-        return cell
+        guard let song = album?.songs?[indexPath.row] else { return AlbumDetailTableViewCell() }
+        cell?.updateWith(song: song, at: indexPath.row + 1)
+        
+        return cell ?? AlbumDetailTableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let song = album?.songs?[indexPath.row] else { return }
+        self.delegate?.didSelect(song: song)
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
 }

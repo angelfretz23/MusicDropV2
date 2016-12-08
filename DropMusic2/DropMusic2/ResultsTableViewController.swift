@@ -50,7 +50,7 @@ class ResultsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? ResultTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as? ResultTableViewCell
 
         let mediaItem = mediaItems[indexPath.row]
         cell?.updateCellWith(mediaItem: mediaItem)
