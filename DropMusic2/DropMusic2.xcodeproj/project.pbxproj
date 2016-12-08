@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F0A1AAA1DF6352C007DCC8A /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AA91DF6352C007DCC8A /* FeedTableViewCell.swift */; };
 		0F0A1AAF1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AAB1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard */; };
-		0F0A1AB01DF63591007DCC8A /* NewSongStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AAD1DF63591007DCC8A /* NewSongStoryBoard.storyboard */; };
 		0F0A1AB21DF63607007DCC8A /* DMPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AB11DF63607007DCC8A /* DMPost.swift */; };
 		0F0A1AB81DF660BD007DCC8A /* MapViewStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AB71DF660BD007DCC8A /* MapViewStoryBoard.storyboard */; };
 		0F0A1ABA1DF67184007DCC8A /* ProfileStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AB91DF67184007DCC8A /* ProfileStoryBoard.storyboard */; };
@@ -23,6 +22,11 @@
 		0F0A1ACA1DF78E94007DCC8A /* GCDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AC91DF78E94007DCC8A /* GCDController.swift */; };
 		0F0A1ACC1DF8A311007DCC8A /* TopChartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1ACB1DF8A311007DCC8A /* TopChartsTableViewCell.swift */; };
 		0F0A1ACE1DF8BA4B007DCC8A /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1ACD1DF8BA4B007DCC8A /* ResultsTableViewController.swift */; };
+		0F0A1AD01DF8BF2F007DCC8A /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1ACF1DF8BF2F007DCC8A /* ResultTableViewCell.swift */; };
+		0F0A1AD21DF8CB51007DCC8A /* NewSongStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AD11DF8CB51007DCC8A /* NewSongStoryBoard.storyboard */; };
+		0F0A1AD41DF93EA4007DCC8A /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AD31DF93EA4007DCC8A /* AlbumDetailViewController.swift */; };
+		0F0A1AD61DF94037007DCC8A /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AD51DF94037007DCC8A /* AlbumController.swift */; };
+		0F0A1AD81DF94811007DCC8A /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AD71DF94811007DCC8A /* AlbumDetailTableViewCell.swift */; };
 		0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB501DEC0E65007A73EB /* DMAlbum.swift */; };
 		0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB541DEC0EBF007A73EB /* DMMediaItem.swift */; };
 		0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB561DEC1689007A73EB /* DMEcho.swift */; };
@@ -39,7 +43,6 @@
 /* Begin PBXFileReference section */
 		0F0A1AA91DF6352C007DCC8A /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		0F0A1AAC1DF63591007DCC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DropMusic2/Base.lproj/CustomTabBarStroyBoard.storyboard; sourceTree = "<group>"; };
-		0F0A1AAE1DF63591007DCC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DropMusic2/Base.lproj/NewSongStoryBoard.storyboard; sourceTree = "<group>"; };
 		0F0A1AB11DF63607007DCC8A /* DMPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPost.swift; sourceTree = "<group>"; };
 		0F0A1AB71DF660BD007DCC8A /* MapViewStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewStoryBoard.storyboard; sourceTree = "<group>"; };
 		0F0A1AB91DF67184007DCC8A /* ProfileStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryBoard.storyboard; sourceTree = "<group>"; };
@@ -53,6 +56,11 @@
 		0F0A1AC91DF78E94007DCC8A /* GCDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDController.swift; sourceTree = "<group>"; };
 		0F0A1ACB1DF8A311007DCC8A /* TopChartsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopChartsTableViewCell.swift; sourceTree = "<group>"; };
 		0F0A1ACD1DF8BA4B007DCC8A /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		0F0A1ACF1DF8BF2F007DCC8A /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		0F0A1AD11DF8CB51007DCC8A /* NewSongStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSongStoryBoard.storyboard; sourceTree = "<group>"; };
+		0F0A1AD31DF93EA4007DCC8A /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		0F0A1AD51DF94037007DCC8A /* AlbumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
+		0F0A1AD71DF94811007DCC8A /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
 		0F17DB501DEC0E65007A73EB /* DMAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAlbum.swift; sourceTree = "<group>"; };
 		0F17DB541DEC0EBF007A73EB /* DMMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMediaItem.swift; sourceTree = "<group>"; };
 		0F17DB561DEC1689007A73EB /* DMEcho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMEcho.swift; sourceTree = "<group>"; };
@@ -82,8 +90,10 @@
 		0F0A1AA81DF634DA007DCC8A /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0F0A1ACF1DF8BF2F007DCC8A /* ResultTableViewCell.swift */,
 				0F0A1ACB1DF8A311007DCC8A /* TopChartsTableViewCell.swift */,
 				0F0A1AA91DF6352C007DCC8A /* FeedTableViewCell.swift */,
+				0F0A1AD71DF94811007DCC8A /* AlbumDetailTableViewCell.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -126,8 +136,8 @@
 			children = (
 				0F0A1AAB1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard */,
 				0FDCC5341DEAEED800B99359 /* FeedStoryBoard.storyboard */,
+				0F0A1AD11DF8CB51007DCC8A /* NewSongStoryBoard.storyboard */,
 				0F0A1AB71DF660BD007DCC8A /* MapViewStoryBoard.storyboard */,
-				0F0A1AAD1DF63591007DCC8A /* NewSongStoryBoard.storyboard */,
 				0F0A1AB91DF67184007DCC8A /* ProfileStoryBoard.storyboard */,
 			);
 			name = Views;
@@ -139,6 +149,7 @@
 				0F0A1ABF1DF77E8C007DCC8A /* ITunesSearchController.swift */,
 				0F0A1AC51DF786AB007DCC8A /* ITunesTopChartsController.swift */,
 				0F0A1AC71DF78E14007DCC8A /* ImageController.swift */,
+				0F0A1AD51DF94037007DCC8A /* AlbumController.swift */,
 				0F0A1AC91DF78E94007DCC8A /* GCDController.swift */,
 				0F0A1AC11DF77E9E007DCC8A /* NetworkController.swift */,
 			);
@@ -152,6 +163,7 @@
 				0F0A1ABB1DF77940007DCC8A /* NewSongTableViewController.swift */,
 				0F0A1ABD1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift */,
 				0F0A1ACD1DF8BA4B007DCC8A /* ResultsTableViewController.swift */,
+				0F0A1AD31DF93EA4007DCC8A /* AlbumDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -248,9 +260,9 @@
 			files = (
 				0F0A1AAF1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard in Resources */,
 				0F0A1ABA1DF67184007DCC8A /* ProfileStoryBoard.storyboard in Resources */,
-				0F0A1AB01DF63591007DCC8A /* NewSongStoryBoard.storyboard in Resources */,
 				0FDCC5361DEAEED800B99359 /* FeedStoryBoard.storyboard in Resources */,
 				0FDCC5291DEAC9C300B99359 /* LaunchScreen.storyboard in Resources */,
+				0F0A1AD21DF8CB51007DCC8A /* NewSongStoryBoard.storyboard in Resources */,
 				0FDCC5261DEAC9C300B99359 /* Assets.xcassets in Resources */,
 				0F0A1AB81DF660BD007DCC8A /* MapViewStoryBoard.storyboard in Resources */,
 			);
@@ -266,9 +278,12 @@
 				0F0A1AB21DF63607007DCC8A /* DMPost.swift in Sources */,
 				0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */,
 				0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */,
+				0F0A1AD41DF93EA4007DCC8A /* AlbumDetailViewController.swift in Sources */,
+				0F0A1AD61DF94037007DCC8A /* AlbumController.swift in Sources */,
 				0F0A1AC01DF77E8C007DCC8A /* ITunesSearchController.swift in Sources */,
 				0F0A1ACE1DF8BA4B007DCC8A /* ResultsTableViewController.swift in Sources */,
 				0FDCC5331DEAEEA100B99359 /* DMSong.swift in Sources */,
+				0F0A1AD81DF94811007DCC8A /* AlbumDetailTableViewCell.swift in Sources */,
 				0F17DB801DED2BF9007A73EB /* FeedTableViewController.swift in Sources */,
 				0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */,
 				0F17DB5B1DEC192F007A73EB /* DMComment.swift in Sources */,
@@ -279,6 +294,7 @@
 				0F0A1AAA1DF6352C007DCC8A /* FeedTableViewCell.swift in Sources */,
 				0F0A1AC21DF77E9E007DCC8A /* NetworkController.swift in Sources */,
 				0F17DB591DEC174B007A73EB /* DMUser.swift in Sources */,
+				0F0A1AD01DF8BF2F007DCC8A /* ResultTableViewCell.swift in Sources */,
 				0F0A1ACA1DF78E94007DCC8A /* GCDController.swift in Sources */,
 				0F0A1AC81DF78E14007DCC8A /* ImageController.swift in Sources */,
 				0F0A1AC61DF786AB007DCC8A /* ITunesTopChartsController.swift in Sources */,
@@ -295,15 +311,6 @@
 				0F0A1AAC1DF63591007DCC8A /* Base */,
 			);
 			name = CustomTabBarStroyBoard.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0F0A1AAD1DF63591007DCC8A /* NewSongStoryBoard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F0A1AAE1DF63591007DCC8A /* Base */,
-			);
-			name = NewSongStoryBoard.storyboard;
 			path = ..;
 			sourceTree = "<group>";
 		};

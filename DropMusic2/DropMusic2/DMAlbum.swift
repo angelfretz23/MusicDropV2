@@ -13,22 +13,37 @@ class DMAlbum: DMMediaItem, Equatable{
     let artist: String
     let coverURL: String
     var storeID: String
+    let releaseDate: String?
+    let copyrights: String?
     var songs: [DMSong]?
     var mediaType: String = "collection"
     
-    init(title: String, artist: String, coverURL: String, storeID: String){
+    init?(dictionary: [String: Any]){
+        guard let title = dictionary["collectionName"] as? String,
+            let releaseDate = dictionary["releaseDate"] as? String,
+            let artist = dictionary["artistName"] as? String,
+            let copyrights = dictionary["copyright"] as? String,
+            let storeID = dictionary["collectionId"] as? Double,
+            let coverURL = dictionary["artworkUrl100"] as? String
+            else { return nil }
         self.title = title
         self.artist = artist
+        self.releaseDate = releaseDate
+        self.copyrights = copyrights
+        self.storeID = storeID.cleanValue
+        self.songs = []
         self.coverURL = coverURL
-        self.storeID = storeID
     }
-    
+
     init(withSong song: DMSong){
         self.title = song.albumName
         self.artist = song.artist
         self.songs = []
         self.coverURL = song.albumCoverStringURL
         self.storeID = song.collectionID!
+        
+        self.releaseDate = nil
+        self.copyrights = nil
     }
    
     func isEqualTo(other: DMMediaItem) -> Bool {

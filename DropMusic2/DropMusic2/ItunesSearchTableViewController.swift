@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ItunesSearchViewControllerDelegate: class {
+    func didSelect(song: DMSong)
+}
+
 class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpdating {
     
     let itunesTopChartsContoller = ITunesTopChartsController()
@@ -19,6 +23,8 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
             tableView.reloadData()
         }
     }
+    
+    weak var delegate: ItunesSearchViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,9 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     // MARK: - Table view data source
 
@@ -88,8 +97,10 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = true
         searchController.searchBar.placeholder = "Search iTunes"
+        searchController.dimsBackgroundDuringPresentation = true
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.delegate = self
+        searchController.delegate = self
         
         definesPresentationContext = true
     }
@@ -117,6 +128,9 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
         
     }
 
+    @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
 
     // MARK: - Navigation
 
@@ -127,12 +141,21 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
     }
 }
 
+extension ItunesSearchTableViewController: UISearchControllerDelegate{
+    func willPresentSearchController(_ searchController: UISearchController) {
+    }
+    
+    func willDismissSearchController(_ searchController: UISearchController) {
+    }
+}
+
+
 extension ItunesSearchTableViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let term = searchBar.text, let resultsTVC = searchController?.searchResultsController as? ResultsTableViewController else { return }
         
         itunesSearchController.fetchSongs(with: term){ (songs) in
-            resultsTVC.songs = self.itunesSearchController.arrayOfItuneObjects
+            resultsTVC.mediaItems = self.itunesSearchController.arrayOfItuneObjects
             resultsTVC.tableView.reloadData()
         }
     }
