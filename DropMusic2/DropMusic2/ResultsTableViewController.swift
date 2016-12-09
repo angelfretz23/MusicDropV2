@@ -64,7 +64,13 @@ class ResultsTableViewController: UITableViewController {
         let media = mediaItems[index]
         if media.mediaType ==  "track"{
             guard let song = media as? DMSong else { return }
-            delegate?.didSelectSong(song: song)
+            
+            let chosenNameNotificationName = NSNotification.Name(rawValue: "chosenSong")
+            NotificationCenter.default.post(name: chosenNameNotificationName, object: song)
+            
+            let notificationName = NSNotification.Name.init("SongHasBeenSelected")
+            NotificationCenter.default.post(name: notificationName, object: nil)
+            self.dismiss(animated: true, completion: nil)
         } else if media.mediaType == "collection"{
             self.presentingViewController?.performSegue(withIdentifier: "albumDetailFromSearchController", sender: cell)
         }

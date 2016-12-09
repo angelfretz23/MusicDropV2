@@ -15,10 +15,29 @@ class NewSongTableViewController: UITableViewController {
     @IBOutlet weak var newSongLabel: UILabel!
     @IBOutlet weak var locationSwitch: UISwitch!
     @IBOutlet weak var descriptionTextView: UITextView!
+    
+    var song: DMSong?{
+        didSet{
+            if let song = self.song{
+                didSelectSong(song: song)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let resultsTVC = storyboard?.instantiateViewController(withIdentifier: "resultsTVC") as? ResultsTableViewController
+        resultsTVC?.delegate = self
+        let chosenNameNotificationName = Notification.Name(rawValue: "chosenSong")
+        NotificationCenter.default.addObserver(self, selector: #selector(updateWith(notification:)), name: chosenNameNotificationName, object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if newSongLabel.isHidden{
+            switchHiddenViews()
+            song = nil
+        }
     }
     
 
@@ -26,5 +45,29 @@ class NewSongTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
+    
+    func switchHiddenViews(){
+        songNameLabel.isHidden = !songNameLabel.isHidden
+        artistNameLabel.isHidden = !artistNameLabel.isHidden
+        albumCoverImageView.isHidden = !albumCoverImageView.isHidden
+        newSongLabel.isHidden = !newSongLabel.isHidden
+    }
+    
+    func updateWith(notification: Notification) {
+        guard let song = notification.object as? DMSong else { return }
+        self.song = song
+    }
+}
 
+extension NewSongTableViewController: ResultsTableViewControllerDelegate{
+    func didSelectSong(song: DMSong) {
+        if !newSongLabel.isHidden{
+            switchHiddenViews()
+        }
+        songNameLabel.text = song.title
+        artistNameLabel.text = song.artist
+        ImageController.fetchImage(withString: song.albumCoverStringURL){ (image) in
+            self.albumCoverImageView.image = image
+        }
+    }
 }

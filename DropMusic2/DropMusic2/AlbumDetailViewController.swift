@@ -68,7 +68,8 @@ extension AlbumDetailViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let song = album?.songs?[indexPath.row] else { return }
-        self.delegate?.didSelect(song: song)
+        let chosenNameNotificationName = NSNotification.Name(rawValue: "chosenSong")
+        NotificationCenter.default.post(name: chosenNameNotificationName, object: song)
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
 }

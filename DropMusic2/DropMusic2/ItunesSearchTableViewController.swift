@@ -37,6 +37,8 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
         itunesTopChartsContoller.fetchSongs { (songs) in
             self.songs = songs
         }
+        let notificationName = NSNotification.Name.init("SongHasBeenSelected")
+        NotificationCenter.default.addObserver(self, selector: #selector(dissmissNavigationController), name: notificationName, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +64,14 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
         
         
         return cell ?? TopChartsTableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let song = songs[indexPath.row]
+        let chosenNameNotificationName = Notification.Name(rawValue: "chosenSong")
+        NotificationCenter.default.post(name: chosenNameNotificationName, object: song)
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -139,6 +149,10 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    }
+    
+    func dissmissNavigationController() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
 }
 
