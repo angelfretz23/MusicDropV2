@@ -26,10 +26,15 @@ class NewSongTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let resultsTVC = storyboard?.instantiateViewController(withIdentifier: "resultsTVC") as? ResultsTableViewController
-        resultsTVC?.delegate = self
+        
         let chosenNameNotificationName = Notification.Name(rawValue: "chosenSong")
         NotificationCenter.default.addObserver(self, selector: #selector(updateWith(notification:)), name: chosenNameNotificationName, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if self.song != nil{
+            setUpPostBarButton()
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -57,9 +62,23 @@ class NewSongTableViewController: UITableViewController {
         guard let song = notification.object as? DMSong else { return }
         self.song = song
     }
+    
+    func setUpPostBarButton(){
+        let rightBarButton = UIBarButtonItem()//barButtonSystemItem: .add, target: self, action: #selector(postSong))
+        rightBarButton.title = "Drop"
+        rightBarButton.target = self
+        rightBarButton.tintColor = UIColor.white
+        rightBarButton.action = #selector(postSong)
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        
+    }
+    
+    func postSong(){
+        print("GOOD")
+    }
 }
 
-extension NewSongTableViewController: ResultsTableViewControllerDelegate{
+extension NewSongTableViewController{
     func didSelectSong(song: DMSong) {
         if !newSongLabel.isHidden{
             switchHiddenViews()

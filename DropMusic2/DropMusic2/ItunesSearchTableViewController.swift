@@ -142,17 +142,21 @@ class ItunesSearchTableViewController: UITableViewController, UISearchResultsUpd
     @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func dissmissNavigationController() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    
-    func dissmissNavigationController() {
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        if segue.identifier == "albumDetailFromSearchController" {
+            guard let albumVC = segue.destination as? AlbumDetailViewController else { return }
+            guard let album = sender as? DMAlbum else { return }
+            albumVC.album = album
+        }
     }
 }
 

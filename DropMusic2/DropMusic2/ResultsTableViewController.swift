@@ -59,7 +59,6 @@ class ResultsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
         let index = (indexPath.section * mediaItems.filter{$0.mediaType == "track"}.count) + indexPath.row
         let media = mediaItems[index]
         if media.mediaType ==  "track"{
@@ -72,7 +71,7 @@ class ResultsTableViewController: UITableViewController {
             NotificationCenter.default.post(name: notificationName, object: nil)
             self.dismiss(animated: true, completion: nil)
         } else if media.mediaType == "collection"{
-            self.presentingViewController?.performSegue(withIdentifier: "albumDetailFromSearchController", sender: cell)
+            self.presentingViewController?.performSegue(withIdentifier: "albumDetailFromSearchController", sender: media)
         }
     }
 

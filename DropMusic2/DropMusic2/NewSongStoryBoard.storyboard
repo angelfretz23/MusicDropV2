@@ -112,6 +112,9 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="aP3-pZ-qhc">
+                                <cells/>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="SOZ-a5-a5n" id="6x5-Gy-VNu"/>
@@ -131,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zH-uL-U4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="151"/>
+            <point key="canvasLocation" x="1653.5999999999999" y="150.67466266866569"/>
         </scene>
         <!--Results Table View Controller-->
         <scene sceneID="idn-bB-9gd">
@@ -261,7 +264,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="dlH-4Z-bLS" kind="show" id="u1e-3y-ssz"/>
+                        <segue destination="dlH-4Z-bLS" kind="show" identifier="albumDetailFromSearchController" id="u1e-3y-ssz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCc-Cf-g3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -391,7 +394,7 @@
                     <connections>
                         <outlet property="albumCoverImageView" destination="Q0a-hb-bPF" id="I6J-Wa-fNC"/>
                         <outlet property="albumNameLabel" destination="m11-V8-5Sx" id="ozg-EZ-NIU"/>
-                        <outlet property="artistNameLable" destination="kvN-MN-l1f" id="Hgi-hc-Qe7"/>
+                        <outlet property="artistNameLabel" destination="kvN-MN-l1f" id="k1M-wf-CKP"/>
                         <outlet property="copyrightsLabel" destination="vKv-F0-J6h" id="lmd-vA-mNf"/>
                         <outlet property="releaseYearLabel" destination="mMt-mm-LNw" id="xFF-PU-nV6"/>
                         <outlet property="tableView" destination="0L6-Gh-AdH" id="AJw-eR-vVd"/>

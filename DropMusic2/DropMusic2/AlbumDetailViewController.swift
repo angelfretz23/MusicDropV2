@@ -22,33 +22,37 @@ class AlbumDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         if let album = album{
             albumController.fetchSongsWithAlbum(ID: album.storeID){ (album) in
                 self.album = album
+                self.updateWith(album: album)
+                self.tableView.reloadData()
             }
-            //updateWith(album: album)
         }
     }
     
-    var album: DMAlbum?{
-        didSet{
-            tableView.reloadData()
-            guard let album = album else { return }
-            updateWith(album: album)
-        }
-    }
+    var album: DMAlbum?
     
     let albumController = AlbumController()
     
     weak var delegate: AlbumDetailViewControllerDelegate?
     
-    func updateWith(album: DMAlbum){
+    func updateWith(album: DMAlbum?){
+        guard let album = album else { return }
         albumNameLabel.text = album.title
         artistNameLabel.text = album.artist
         copyrightsLabel.text = album.copyrights
         
         let year = album.releaseDate?.components(separatedBy: "-").first
         releaseYearLabel.text = year
+        
+        ImageController.fetchImage(withString: album.coverURL){ (image) in
+            self.albumCoverImageView.image = image
+        }
     }
 }
 
