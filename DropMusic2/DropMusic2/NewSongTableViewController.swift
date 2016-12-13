@@ -26,7 +26,7 @@ class NewSongTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        descriptionTextView.delegate = self
         let chosenNameNotificationName = Notification.Name(rawValue: "chosenSong")
         NotificationCenter.default.addObserver(self, selector: #selector(updateWith(notification:)), name: chosenNameNotificationName, object: nil)
     }
@@ -74,7 +74,9 @@ class NewSongTableViewController: UITableViewController {
     }
     
     func postSong(){
-        print("GOOD")
+        guard let song = self.song else { return }
+        let post = DMPost(song: song, description: descriptionTextView.text)
+        PostController.sharedController.createPost(post, completion: nil)
     }
 }
 
@@ -88,5 +90,16 @@ extension NewSongTableViewController{
         ImageController.fetchImage(withString: song.albumCoverStringURL){ (image) in
             self.albumCoverImageView.image = image
         }
+    }
+}
+
+extension NewSongTableViewController: UITextViewDelegate{
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text.contains("\n"){
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        return true
     }
 }

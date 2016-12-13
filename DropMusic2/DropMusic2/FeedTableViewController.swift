@@ -12,7 +12,9 @@ class FeedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let postsChangedNotification = Notification.Name(rawValue: "PostsChangedNotification")
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: postsChangedNotification, object: nil)
+
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -22,25 +24,19 @@ class FeedTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Fetch posts
-        return 0
+        return PostController.sharedController.posts.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath) as? FeedTableViewCell
 
-        
+        let post = PostController.sharedController.posts[indexPath.row]
+        cell?.updateWith(post: post)
 
         return cell ?? FeedTableViewCell()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateUI(){
+        self.tableView.reloadData()
     }
-    */
-
 }

@@ -24,15 +24,26 @@ class FeedTableViewCell: UITableViewCell {
         tableView.dataSource = self
     }
     
+    var comments: [DMComment]? = []{
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
     func updateWith(post: DMPost){
-        
+        songNameLabel.text = post.song.title
+        artistNameLabel.text = post.song.artist
+        descriptionLabel.text = post.description
+        self.comments = post.comments
+        ImageController.fetchImage(withString: post.song.albumCoverStringURL){ (image) in
+            self.albumCoverImageView.image = image
+        }
     }
 }
 
 extension FeedTableViewCell: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 0
+        return comments?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
