@@ -34,6 +34,7 @@
 		0F17DB5B1DEC192F007A73EB /* DMComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB5A1DEC192F007A73EB /* DMComment.swift */; };
 		0F17DB801DED2BF9007A73EB /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */; };
 		0F5B16A11DFF72A00073F806 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A01DFF72A00073F806 /* PostController.swift */; };
+		0F5B16A51DFFCB000073F806 /* PhoneUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */; };
 		0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCC51E1DEAC9C300B99359 /* AppDelegate.swift */; };
 		0FDCC5261DEAC9C300B99359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5251DEAC9C300B99359 /* Assets.xcassets */; };
 		0FDCC5291DEAC9C300B99359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5271DEAC9C300B99359 /* LaunchScreen.storyboard */; };
@@ -69,6 +70,7 @@
 		0F17DB5A1DEC192F007A73EB /* DMComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMComment.swift; sourceTree = "<group>"; };
 		0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		0F5B16A01DFF72A00073F806 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneUserController.swift; sourceTree = "<group>"; };
 		0FDCC51B1DEAC9C300B99359 /* DropMusic2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropMusic2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDCC51E1DEAC9C300B99359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FDCC5251DEAC9C300B99359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		0F17DB7E1DED2A94007A73EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */,
 				0F5B16A01DFF72A00073F806 /* PostController.swift */,
 				0F0A1ABF1DF77E8C007DCC8A /* ITunesSearchController.swift */,
 				0F0A1AC51DF786AB007DCC8A /* ITunesTopChartsController.swift */,
@@ -283,6 +286,7 @@
 				0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */,
 				0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */,
 				0F0A1AD41DF93EA4007DCC8A /* AlbumDetailViewController.swift in Sources */,
+				0F5B16A51DFFCB000073F806 /* PhoneUserController.swift in Sources */,
 				0F0A1AD61DF94037007DCC8A /* AlbumController.swift in Sources */,
 				0F0A1AC01DF77E8C007DCC8A /* ITunesSearchController.swift in Sources */,
 				0F0A1ACE1DF8BA4B007DCC8A /* ResultsTableViewController.swift in Sources */,
