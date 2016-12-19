@@ -67,7 +67,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ex8-nn-e4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="1320"/>
+            <point key="canvasLocation" x="790" y="1320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="635-rc-vVO">
@@ -105,13 +105,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Yp-ea-5E2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-940" y="781"/>
+            <point key="canvasLocation" x="-942" y="779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tw9-X9-VSR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lHe-wX-udp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="AddMusic-1" id="uq5-g2-ThI"/>
+                    <tabBarItem key="tabBarItem" title="" image="AddMusic" id="uq5-g2-ThI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="80s-1y-VzB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -124,7 +124,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9g-aw-iOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="780"/>
+            <point key="canvasLocation" x="-46" y="779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pwL-Mr-vtS">
@@ -143,11 +143,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xc-Aw-opj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="780"/>
+            <point key="canvasLocation" x="790" y="780"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AddMusic-1" width="25" height="25"/>
+        <image name="AddMusic" width="25" height="25"/>
         <image name="Globe" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>

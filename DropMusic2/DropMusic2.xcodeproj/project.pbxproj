@@ -35,6 +35,8 @@
 		0F17DB801DED2BF9007A73EB /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */; };
 		0F5B16A11DFF72A00073F806 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A01DFF72A00073F806 /* PostController.swift */; };
 		0F5B16A51DFFCB000073F806 /* PhoneUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */; };
+		0F5B16A71E0870210073F806 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A61E0870210073F806 /* UserController.swift */; };
+		0F5B16AC1E0886E30073F806 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */; };
 		0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCC51E1DEAC9C300B99359 /* AppDelegate.swift */; };
 		0FDCC5261DEAC9C300B99359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5251DEAC9C300B99359 /* Assets.xcassets */; };
 		0FDCC5291DEAC9C300B99359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5271DEAC9C300B99359 /* LaunchScreen.storyboard */; };
@@ -71,6 +73,8 @@
 		0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		0F5B16A01DFF72A00073F806 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneUserController.swift; sourceTree = "<group>"; };
+		0F5B16A61E0870210073F806 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		0FDCC51B1DEAC9C300B99359 /* DropMusic2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropMusic2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDCC51E1DEAC9C300B99359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FDCC5251DEAC9C300B99359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 		0F17DB7E1DED2A94007A73EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F5B16A61E0870210073F806 /* UserController.swift */,
 				0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */,
 				0F5B16A01DFF72A00073F806 /* PostController.swift */,
 				0F0A1ABF1DF77E8C007DCC8A /* ITunesSearchController.swift */,
@@ -165,13 +170,38 @@
 		0F17DB811DED2BFD007A73EB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */,
+				0F5B16A91E0886A30073F806 /* Feed */,
+				0F5B16A81E0886970073F806 /* NewSong */,
+				0F5B16AA1E0886B30073F806 /* Profile */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0F5B16A81E0886970073F806 /* NewSong */ = {
+			isa = PBXGroup;
+			children = (
 				0F0A1ABB1DF77940007DCC8A /* NewSongTableViewController.swift */,
 				0F0A1ABD1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift */,
 				0F0A1ACD1DF8BA4B007DCC8A /* ResultsTableViewController.swift */,
 				0F0A1AD31DF93EA4007DCC8A /* AlbumDetailViewController.swift */,
 			);
-			name = ViewControllers;
+			name = NewSong;
+			sourceTree = "<group>";
+		};
+		0F5B16A91E0886A30073F806 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		0F5B16AA1E0886B30073F806 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		0FDCC5121DEAC9C300B99359 = {
@@ -281,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5B16A71E0870210073F806 /* UserController.swift in Sources */,
 				0F5B16A11DFF72A00073F806 /* PostController.swift in Sources */,
 				0F0A1AB21DF63607007DCC8A /* DMPost.swift in Sources */,
 				0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */,
@@ -294,6 +325,7 @@
 				0F0A1AD81DF94811007DCC8A /* AlbumDetailTableViewCell.swift in Sources */,
 				0F17DB801DED2BF9007A73EB /* FeedTableViewController.swift in Sources */,
 				0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */,
+				0F5B16AC1E0886E30073F806 /* ProfileTableViewController.swift in Sources */,
 				0F17DB5B1DEC192F007A73EB /* DMComment.swift in Sources */,
 				0F0A1ABC1DF77940007DCC8A /* NewSongTableViewController.swift in Sources */,
 				0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */,
