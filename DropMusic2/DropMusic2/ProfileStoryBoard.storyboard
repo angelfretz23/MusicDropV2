@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,50 +28,74 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POB-rO-SfU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="POB-rO-SfU">
+                                                    <rect key="frame" x="1" y="1" width="150" height="150"/>
                                                     <gestureRecognizers/>
                                                     <connections>
                                                         <outletCollection property="gestureRecognizers" destination="8o2-aG-TwR" appends="YES" id="tbG-Np-Y0D"/>
                                                     </connections>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEl-8A-GLO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEl-8A-GLO">
                                                     <rect key="frame" x="158" y="8" width="209" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="dMX-Ak-uEg"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.26274509800000001" green="0.74901960779999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to add or update profile photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzV-OU-F0q">
-                                                    <rect key="frame" x="8" y="150" width="142" height="10"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to add or update profile photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzV-OU-F0q">
+                                                    <rect key="frame" x="8" y="157" width="142" height="10"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="character limit: 150" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEC-2U-8Ms">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="character limit: 150" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEC-2U-8Ms">
                                                     <rect key="frame" x="273" y="150" width="94" height="10"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="94" id="uLW-Ed-ONA"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uwt-W5-Ehe">
-                                                    <rect key="frame" x="158" y="57" width="209" height="93"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6D-Ir-2sf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6D-Ir-2sf">
                                                     <rect key="frame" x="158" y="40" width="124" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="zxK-Nl-fgk"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uwt-W5-Ehe">
+                                                    <rect key="frame" x="158" y="57" width="209" height="93"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lzV-OU-F0q" firstAttribute="top" secondItem="POB-rO-SfU" secondAttribute="bottom" constant="6" id="1Ue-Ep-Hp3"/>
+                                                <constraint firstItem="d6D-Ir-2sf" firstAttribute="top" secondItem="YEl-8A-GLO" secondAttribute="bottom" constant="8" symbolic="YES" id="4pC-Lk-kuq"/>
+                                                <constraint firstItem="POB-rO-SfU" firstAttribute="height" secondItem="Bja-k3-xlg" secondAttribute="height" constant="-17" id="7Pb-ct-1Ud"/>
+                                                <constraint firstItem="YEl-8A-GLO" firstAttribute="leading" secondItem="d6D-Ir-2sf" secondAttribute="leading" id="Ade-G2-V66"/>
+                                                <constraint firstItem="POB-rO-SfU" firstAttribute="trailing" secondItem="lzV-OU-F0q" secondAttribute="trailing" constant="1" id="EVi-0K-0aR"/>
+                                                <constraint firstItem="YEl-8A-GLO" firstAttribute="trailing" secondItem="Bja-k3-xlg" secondAttribute="trailingMargin" id="I61-I0-JeC"/>
+                                                <constraint firstItem="lzV-OU-F0q" firstAttribute="baseline" secondItem="LEC-2U-8Ms" secondAttribute="baseline" constant="7" id="MW1-qz-32s"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lzV-OU-F0q" secondAttribute="bottom" constant="-8" id="OEC-Zs-xYp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="d6D-Ir-2sf" secondAttribute="trailing" constant="85" id="Y14-U8-Z7a"/>
+                                                <constraint firstItem="d6D-Ir-2sf" firstAttribute="leading" secondItem="POB-rO-SfU" secondAttribute="trailing" constant="7" id="a29-6l-3I8"/>
+                                                <constraint firstItem="uwt-W5-Ehe" firstAttribute="trailing" secondItem="LEC-2U-8Ms" secondAttribute="trailing" id="aPa-LO-gEE"/>
+                                                <constraint firstItem="lzV-OU-F0q" firstAttribute="leading" secondItem="Bja-k3-xlg" secondAttribute="leadingMargin" id="eFV-qQ-oVF"/>
+                                                <constraint firstItem="POB-rO-SfU" firstAttribute="bottom" secondItem="uwt-W5-Ehe" secondAttribute="bottom" constant="1" id="hFz-u8-dd2"/>
+                                                <constraint firstItem="YEl-8A-GLO" firstAttribute="trailing" secondItem="uwt-W5-Ehe" secondAttribute="trailing" id="hK9-hL-ZGr"/>
+                                                <constraint firstItem="POB-rO-SfU" firstAttribute="leading" secondItem="Bja-k3-xlg" secondAttribute="leading" constant="1" id="kkx-lp-BBk"/>
+                                                <constraint firstItem="d6D-Ir-2sf" firstAttribute="leading" secondItem="uwt-W5-Ehe" secondAttribute="leading" id="qGM-oc-cFY"/>
+                                                <constraint firstItem="uwt-W5-Ehe" firstAttribute="top" secondItem="d6D-Ir-2sf" secondAttribute="bottom" constant="1" id="t3m-6d-DNe"/>
+                                                <constraint firstItem="YEl-8A-GLO" firstAttribute="top" secondItem="Bja-k3-xlg" secondAttribute="topMargin" id="tyT-wP-D7q"/>
+                                                <constraint firstItem="POB-rO-SfU" firstAttribute="top" secondItem="Bja-k3-xlg" secondAttribute="top" constant="1" id="vF3-th-bYT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -106,7 +131,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="profileDescriptionImageView" destination="uwt-W5-Ehe" id="3yv-EQ-mPt"/>
+                        <outlet property="profileDescriptionTextView" destination="uwt-W5-Ehe" id="zPo-xi-sGS"/>
                         <outlet property="profileImageView" destination="POB-rO-SfU" id="HZ1-mD-bBO"/>
                         <outlet property="textCountLabel" destination="LEC-2U-8Ms" id="PbA-c6-MTQ"/>
                         <outlet property="usernameLabel" destination="YEl-8A-GLO" id="eNb-MP-2Z0"/>

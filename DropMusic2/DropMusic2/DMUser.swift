@@ -9,9 +9,9 @@
 import Foundation
 
 class DMUser{
-    let username: String
-    let profilePicture: Data?
-    let profileDescription: String?
+    var username: String
+    var profilePicture: Data?
+    var profileDescription: String?
     let uuid: UUID
     let cloudID: String?
     
@@ -21,8 +21,8 @@ class DMUser{
     private let kUUID = "UUID"
     private let kcloudID = "CloudID"
     
-    var dictionaryRepresentation: [String: Any?]{
-        return [kUsername : self.username, kProfilePicture : self.profilePicture, kProfileDescription: self.profileDescription, kUUID: self.uuid, kcloudID: self.cloudID]
+    var dictionaryRepresentation: [String: Any]{
+        return [kUsername : self.username, kProfilePicture : self.profilePicture,  kProfileDescription: self.profileDescription, kUUID: self.uuid.uuidString, kcloudID: self.cloudID]
         
     }
     
@@ -38,13 +38,13 @@ class DMUser{
         guard let username = dictionary[kUsername] as? String,
         let profilePicture = dictionary[kProfilePicture] as? Data?,
         let profileDescription = dictionary[kProfileDescription] as? String?,
-        let uuid = dictionary[kUUID] as? UUID,
+        let uuid = dictionary[kUUID] as? String,
             let cloudID = dictionary[kcloudID] as? String? else { return nil }
         
         self.username = username
         self.profilePicture = profilePicture
         self.profileDescription = profileDescription
-        self.uuid = uuid
+        self.uuid = UUID(uuidString: uuid)!
         self.cloudID = cloudID
     }
     

@@ -21,7 +21,9 @@ class UserController{
     private let kUser = "User"
     
     init(){
+        
         loadFromPersistStore()
+//        self.user = DMUser(username: "Angelfretz", profilePicture: nil, profileDescription: "Hello, my name is Angel!", uuid: UUID(), cloudID: "Cloudnumber")
     }
     
     deinit {
@@ -39,7 +41,13 @@ class UserController{
     }
     
     func loadFromPersistStore(){
-        guard let userDictionary = UserDefaults.standard.object(forKey: kUser) as? [String: Any?] else { return }
+        guard let userDictionary = UserDefaults.standard.object(forKey: kUser) as? [String: Any] else { return }
         self.user = DMUser(dictionary: userDictionary)
+    }
+    
+    func setProfileImage(withImage data: Data?){
+        guard let data = data else { return }
+        self.user?.profilePicture = data
+        saveToPersistStore()
     }
 }
