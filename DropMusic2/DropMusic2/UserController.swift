@@ -10,20 +10,16 @@ import Foundation
 
 class UserController{
     
-    private(set) var user: DMUser?{
-        didSet{
-            GCDController().backgroundThread(background: { 
-                self.saveToPersistStore()
-            }, completion: nil)
-        }
-    }
+    private(set) var user: DMUser?
     
     private let kUser = "User"
     
     init(){
         
         loadFromPersistStore()
-//        self.user = DMUser(username: "Angelfretz", profilePicture: nil, profileDescription: "Hello, my name is Angel!", uuid: UUID(), cloudID: "Cloudnumber")
+        if self.user ==  nil{
+            self.user = DMUser(username: "Angelfretz", profilePicture: nil, profileDescription: "Hello, my name is Angel!", uuid: UUID(), cloudID: "Cloudnumber")
+        }
     }
     
     deinit {
@@ -45,9 +41,19 @@ class UserController{
         self.user = DMUser(dictionary: userDictionary)
     }
     
-    func setProfileImage(withImage data: Data?){
-        guard let data = data else { return }
-        self.user?.profilePicture = data
+    func updateProfileInfo(with imageData: Data? = nil, _ username: String? = nil, _ profileDescription: String? = nil){
+        if let imageData = imageData {
+            self.user?.profilePicture = imageData
+        }
+        
+        if let username = username{
+            self.user?.username = username
+        }
+        
+        if let profileDescription = profileDescription{
+            self.user?.profileDescription = profileDescription
+        }
+        
         saveToPersistStore()
     }
 }

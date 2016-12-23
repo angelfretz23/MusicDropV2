@@ -15,11 +15,21 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var profileDescriptionTextView: UITextView!
     @IBOutlet weak var textCountLabel: UILabel!
     
+    let descriptionTextViewCharacterLimit = 150
+    
     let userController = UserController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileDescriptionTextView.delegate = self
         
+        if let user = userController.user{
+            updateUI(with: user)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let user = userController.user{
             updateUI(with: user)
         }
@@ -51,11 +61,35 @@ class ProfileTableViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func usernameLabelTapped(_ sender: UITapGestureRecognizer) {
+        var alertControllerTextField: UITextField?
+        
+        let alertController = UIAlertController(title: "Change UserName", message: "What would you like your new username to be?", preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "New Username"
+            alertControllerTextField = textField
+        }
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            let newUsername = alertControllerTextField?.text
+            self.userController.updateProfileInfo(with: nil, newUsername)
+            self.usernameLabel.text = newUsername
+        }
+        
+        alertController.addAction(okAction)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func updateUI(with user: DMUser){
         usernameLabel.text = user.username
+        profileDescriptionTextView.text = user.profileDescription
+        textCountLabel.text = "character limit: \(descriptionTextViewCharacterLimit - (user.profileDescription?.characters.count ?? 0))"
         guard let data = user.profilePicture else { print("No Data"); return }
         profileImageView.image = UIImage(data: data )
-        profileDescriptionTextView.text = user.profileDescription
+        
     }
 }
 
@@ -66,12 +100,26 @@ extension ProfileTableViewController: UIImagePickerControllerDelegate, UINavigat
             guard let circleImage = image.circle else { return }
             profileImageView.image = circleImage
             let imageData = UIImageJPEGRepresentation(circleImage, 1.0)
-            userController.setProfileImage(withImage: imageData)
+            userController.updateProfileInfo(with: imageData)
         }
         picker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension ProfileTableViewController: UITextViewDelegate{
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if textView.text.characters.count + text.characters.count > 150{
+            return false
+        }
+        return true
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        textCountLabel.text = "character limit: \(descriptionTextViewCharacterLimit - textView.text.characters.count)"
+
     }
 }
