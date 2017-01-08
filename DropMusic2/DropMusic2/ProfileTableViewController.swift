@@ -41,7 +41,7 @@ class ProfileTableViewController: UITableViewController {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         
-        let alertController = UIAlertController(title: "Select a Photo Location", message: "Please choose the method in which you would like to upload a profile with.", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Select a Photo Source", message: "Please select the source where you would like to upload a profile picture.", preferredStyle: .actionSheet)
         
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             alertController.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (_) in
