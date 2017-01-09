@@ -18,11 +18,11 @@ class DMPost{
     let description: String?
     let uuid: UUID
     
-    init(song: DMSong, timestamp: Date? = nil,location: CLLocation? = nil, description: String?, comments: [DMComment]? = nil){
+    init(song: DMSong, timestamp: Date? = nil, userUUID: UUID,location: CLLocation? = nil, description: String?, comments: [DMComment]? = nil){
         self.song = song
         self.timestamp = timestamp ?? Date()
         self.uuid = UUID()
-        self.userUUID = UUID()
+        self.userUUID = userUUID
         self.location = location
         self.description = description
         self.comments = comments

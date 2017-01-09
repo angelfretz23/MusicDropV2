@@ -34,11 +34,16 @@
 		0F17DB5B1DEC192F007A73EB /* DMComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB5A1DEC192F007A73EB /* DMComment.swift */; };
 		0F17DB801DED2BF9007A73EB /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */; };
 		0F5B16A11DFF72A00073F806 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A01DFF72A00073F806 /* PostController.swift */; };
+		0F5B16A51DFFCB000073F806 /* PhoneUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */; };
+		0F5B16A71E0870210073F806 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A61E0870210073F806 /* UserController.swift */; };
+		0F5B16AC1E0886E30073F806 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */; };
+		0F70714B1E14914F004D0A04 /* NewUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */; };
 		0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCC51E1DEAC9C300B99359 /* AppDelegate.swift */; };
 		0FDCC5261DEAC9C300B99359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5251DEAC9C300B99359 /* Assets.xcassets */; };
 		0FDCC5291DEAC9C300B99359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5271DEAC9C300B99359 /* LaunchScreen.storyboard */; };
 		0FDCC5331DEAEEA100B99359 /* DMSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCC5321DEAEEA100B99359 /* DMSong.swift */; };
 		0FDCC5361DEAEED800B99359 /* FeedStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5341DEAEED800B99359 /* FeedStoryBoard.storyboard */; };
+		694C91661E0C7B730055486F /* NewUserStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694C91641E0C7B730055486F /* NewUserStoryBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +74,10 @@
 		0F17DB5A1DEC192F007A73EB /* DMComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMComment.swift; sourceTree = "<group>"; };
 		0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		0F5B16A01DFF72A00073F806 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneUserController.swift; sourceTree = "<group>"; };
+		0F5B16A61E0870210073F806 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserTableViewController.swift; sourceTree = "<group>"; };
 		0FDCC51B1DEAC9C300B99359 /* DropMusic2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropMusic2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDCC51E1DEAC9C300B99359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FDCC5251DEAC9C300B99359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +85,7 @@
 		0FDCC52A1DEAC9C300B99359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FDCC5321DEAEEA100B99359 /* DMSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSong.swift; sourceTree = "<group>"; };
 		0FDCC5351DEAEED800B99359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DropMusic2/Base.lproj/FeedStoryBoard.storyboard; sourceTree = "<group>"; };
+		694C91651E0C7B730055486F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewUserStoryBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,7 @@
 		0F17DB5D1DEC1B5D007A73EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				694C91641E0C7B730055486F /* NewUserStoryBoard.storyboard */,
 				0F0A1AAB1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard */,
 				0FDCC5341DEAEED800B99359 /* FeedStoryBoard.storyboard */,
 				0F0A1AD11DF8CB51007DCC8A /* NewSongStoryBoard.storyboard */,
@@ -148,6 +159,8 @@
 		0F17DB7E1DED2A94007A73EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F5B16A61E0870210073F806 /* UserController.swift */,
+				0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */,
 				0F5B16A01DFF72A00073F806 /* PostController.swift */,
 				0F0A1ABF1DF77E8C007DCC8A /* ITunesSearchController.swift */,
 				0F0A1AC51DF786AB007DCC8A /* ITunesTopChartsController.swift */,
@@ -162,13 +175,47 @@
 		0F17DB811DED2BFD007A73EB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */,
+				0F7071491E14912F004D0A04 /* NewUser */,
+				0F5B16A91E0886A30073F806 /* Feed */,
+				0F5B16A81E0886970073F806 /* NewSong */,
+				0F5B16AA1E0886B30073F806 /* Profile */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0F5B16A81E0886970073F806 /* NewSong */ = {
+			isa = PBXGroup;
+			children = (
 				0F0A1ABB1DF77940007DCC8A /* NewSongTableViewController.swift */,
 				0F0A1ABD1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift */,
 				0F0A1ACD1DF8BA4B007DCC8A /* ResultsTableViewController.swift */,
 				0F0A1AD31DF93EA4007DCC8A /* AlbumDetailViewController.swift */,
 			);
-			name = ViewControllers;
+			name = NewSong;
+			sourceTree = "<group>";
+		};
+		0F5B16A91E0886A30073F806 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				0F17DB7F1DED2BF8007A73EB /* FeedTableViewController.swift */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		0F5B16AA1E0886B30073F806 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		0F7071491E14912F004D0A04 /* NewUser */ = {
+			isa = PBXGroup;
+			children = (
+				0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */,
+			);
+			name = NewUser;
 			sourceTree = "<group>";
 		};
 		0FDCC5121DEAC9C300B99359 = {
@@ -266,6 +313,7 @@
 				0FDCC5361DEAEED800B99359 /* FeedStoryBoard.storyboard in Resources */,
 				0FDCC5291DEAC9C300B99359 /* LaunchScreen.storyboard in Resources */,
 				0F0A1AD21DF8CB51007DCC8A /* NewSongStoryBoard.storyboard in Resources */,
+				694C91661E0C7B730055486F /* NewUserStoryBoard.storyboard in Resources */,
 				0FDCC5261DEAC9C300B99359 /* Assets.xcassets in Resources */,
 				0F0A1AB81DF660BD007DCC8A /* MapViewStoryBoard.storyboard in Resources */,
 			);
@@ -278,11 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F70714B1E14914F004D0A04 /* NewUserTableViewController.swift in Sources */,
+				0F5B16A71E0870210073F806 /* UserController.swift in Sources */,
 				0F5B16A11DFF72A00073F806 /* PostController.swift in Sources */,
 				0F0A1AB21DF63607007DCC8A /* DMPost.swift in Sources */,
 				0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */,
 				0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */,
 				0F0A1AD41DF93EA4007DCC8A /* AlbumDetailViewController.swift in Sources */,
+				0F5B16A51DFFCB000073F806 /* PhoneUserController.swift in Sources */,
 				0F0A1AD61DF94037007DCC8A /* AlbumController.swift in Sources */,
 				0F0A1AC01DF77E8C007DCC8A /* ITunesSearchController.swift in Sources */,
 				0F0A1ACE1DF8BA4B007DCC8A /* ResultsTableViewController.swift in Sources */,
@@ -290,6 +341,7 @@
 				0F0A1AD81DF94811007DCC8A /* AlbumDetailTableViewCell.swift in Sources */,
 				0F17DB801DED2BF9007A73EB /* FeedTableViewController.swift in Sources */,
 				0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */,
+				0F5B16AC1E0886E30073F806 /* ProfileTableViewController.swift in Sources */,
 				0F17DB5B1DEC192F007A73EB /* DMComment.swift in Sources */,
 				0F0A1ABC1DF77940007DCC8A /* NewSongTableViewController.swift in Sources */,
 				0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */,
@@ -333,6 +385,14 @@
 			);
 			name = FeedStoryBoard.storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		694C91641E0C7B730055486F /* NewUserStoryBoard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				694C91651E0C7B730055486F /* Base */,
+			);
+			name = NewUserStoryBoard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

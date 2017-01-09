@@ -31,12 +31,21 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     func updateWith(post: DMPost){
+        
         songNameLabel.text = post.song.title
         artistNameLabel.text = post.song.artist
         descriptionLabel.text = post.description
         self.comments = post.comments
-        ImageController.fetchImage(withString: post.song.albumCoverStringURL){ (image) in
+        let url = post.song.albumCoverStringURL.replacingOccurrences(of: "100", with: "150")
+        
+        ImageController.fetchImage(withString: url){ (image) in
             self.albumCoverImageView.image = image
+        }
+        guard let user = UserController().user else { return }
+        
+        if post.userUUID == user.uuid {
+            userProfileImageView.image = UIImage(data: user.profilePicture!)
+            usernameLabel.text = user.username
         }
     }
 }

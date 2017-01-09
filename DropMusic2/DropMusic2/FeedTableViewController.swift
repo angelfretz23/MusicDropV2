@@ -30,7 +30,7 @@ class FeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath) as? FeedTableViewCell
 
-        let post = PostController.sharedController.posts[indexPath.row]
+        let post = PostController.sharedController.posts.sorted{ $0.0.timestamp > $0.1.timestamp }[indexPath.row]
         cell?.updateWith(post: post)
 
         return cell ?? FeedTableViewCell()

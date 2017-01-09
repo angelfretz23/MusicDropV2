@@ -52,7 +52,8 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as? ResultTableViewCell
 
-        let mediaItem = mediaItems[indexPath.row]
+        let index = (indexPath.section * mediaItems.filter{$0.mediaType == "track"}.count) + indexPath.row
+        let mediaItem = mediaItems[index]
         cell?.updateCellWith(mediaItem: mediaItem)
 
         return cell ?? ResultTableViewCell()

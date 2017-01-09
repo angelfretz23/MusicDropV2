@@ -67,15 +67,17 @@ class NewSongTableViewController: UITableViewController {
         let rightBarButton = UIBarButtonItem()//barButtonSystemItem: .add, target: self, action: #selector(postSong))
         rightBarButton.title = "Drop"
         rightBarButton.target = self
-        rightBarButton.tintColor = UIColor.white
+        rightBarButton.tintColor = UIColor.blue
         rightBarButton.action = #selector(postSong)
         self.navigationItem.rightBarButtonItem = rightBarButton
         
     }
     
     func postSong(){
-        guard let song = self.song else { return }
-        let post = DMPost(song: song, description: descriptionTextView.text)
+        
+        guard let song = self.song,
+        let user = UserController().user else { return }
+        let post = DMPost(song: song, userUUID: user.uuid, description: descriptionTextView.text)
         PostController.sharedController.createPost(post, completion: nil)
     }
 }
@@ -99,7 +101,6 @@ extension NewSongTableViewController: UITextViewDelegate{
             textView.resignFirstResponder()
             return false
         }
-        
         return true
     }
 }
