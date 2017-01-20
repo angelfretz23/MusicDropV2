@@ -38,6 +38,7 @@
 		0F5B16A71E0870210073F806 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A61E0870210073F806 /* UserController.swift */; };
 		0F5B16AC1E0886E30073F806 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */; };
 		0F70714B1E14914F004D0A04 /* NewUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */; };
+		0F7FEB861E31C6D900884B6C /* EchoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FEB851E31C6D900884B6C /* EchoCollectionViewCell.swift */; };
 		0FDCC51F1DEAC9C300B99359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCC51E1DEAC9C300B99359 /* AppDelegate.swift */; };
 		0FDCC5261DEAC9C300B99359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5251DEAC9C300B99359 /* Assets.xcassets */; };
 		0FDCC5291DEAC9C300B99359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC5271DEAC9C300B99359 /* LaunchScreen.storyboard */; };
@@ -78,6 +79,7 @@
 		0F5B16A61E0870210073F806 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserTableViewController.swift; sourceTree = "<group>"; };
+		0F7FEB851E31C6D900884B6C /* EchoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FDCC51B1DEAC9C300B99359 /* DropMusic2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropMusic2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDCC51E1DEAC9C300B99359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FDCC5251DEAC9C300B99359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				0F0A1ACB1DF8A311007DCC8A /* TopChartsTableViewCell.swift */,
 				0F0A1AA91DF6352C007DCC8A /* FeedTableViewCell.swift */,
 				0F0A1AD71DF94811007DCC8A /* AlbumDetailTableViewCell.swift */,
+				0F7FEB851E31C6D900884B6C /* EchoCollectionViewCell.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				0F0A1ABC1DF77940007DCC8A /* NewSongTableViewController.swift in Sources */,
 				0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */,
 				0F0A1ABE1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift in Sources */,
+				0F7FEB861E31C6D900884B6C /* EchoCollectionViewCell.swift in Sources */,
 				0F0A1ACC1DF8A311007DCC8A /* TopChartsTableViewCell.swift in Sources */,
 				0F0A1AAA1DF6352C007DCC8A /* FeedTableViewCell.swift in Sources */,
 				0F0A1AC21DF77E9E007DCC8A /* NetworkController.swift in Sources */,
