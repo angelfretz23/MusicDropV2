@@ -79,6 +79,7 @@ class NewSongTableViewController: UITableViewController {
         let user = UserController().user else { return }
         let post = DMPost(song: song, userUUID: user.uuid, description: descriptionTextView.text)
         PostController.sharedController.createPost(post, completion: nil)
+        self.tabBarController?.selectedIndex = 0
     }
 }
 
