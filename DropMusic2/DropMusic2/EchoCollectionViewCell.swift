@@ -9,5 +9,7 @@
 import UIKit
 
 class EchoCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var echoLabel: UILabel!
+    
     
 }
