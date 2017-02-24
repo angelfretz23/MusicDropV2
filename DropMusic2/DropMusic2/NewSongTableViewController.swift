@@ -64,7 +64,7 @@ class NewSongTableViewController: UITableViewController {
     }
     
     func setUpPostBarButton(){
-        let rightBarButton = UIBarButtonItem()//barButtonSystemItem: .add, target: self, action: #selector(postSong))
+        let rightBarButton = UIBarButtonItem()//barButtonSystemItem: .add, target: self, action: #selector(postSong))
         rightBarButton.title = "Drop"
         rightBarButton.target = self
         rightBarButton.tintColor = UIColor.blue

@@ -37,6 +37,7 @@
 		0F5B16A51DFFCB000073F806 /* PhoneUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */; };
 		0F5B16A71E0870210073F806 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A61E0870210073F806 /* UserController.swift */; };
 		0F5B16AC1E0886E30073F806 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */; };
+		0F6934761E60EB3000E0D586 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6934751E60EB3000E0D586 /* CustomTabBarView.swift */; };
 		0F70714B1E14914F004D0A04 /* NewUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */; };
 		0F7FEB861E31C6D900884B6C /* EchoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FEB851E31C6D900884B6C /* EchoCollectionViewCell.swift */; };
 		0F7FEB881E31CB3600884B6C /* AllEmojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FEB871E31CB3600884B6C /* AllEmojis.swift */; };
@@ -79,6 +80,7 @@
 		0F5B16A41DFFCB000073F806 /* PhoneUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneUserController.swift; sourceTree = "<group>"; };
 		0F5B16A61E0870210073F806 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		0F6934751E60EB3000E0D586 /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTabBarView.swift; path = CustomToolBar/CustomTabBarView.swift; sourceTree = "<group>"; };
 		0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserTableViewController.swift; sourceTree = "<group>"; };
 		0F7FEB851E31C6D900884B6C /* EchoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F7FEB871E31CB3600884B6C /* AllEmojis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllEmojis.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		0F17DB811DED2BFD007A73EB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F6934741E60EAE000E0D586 /* Custom Tool Bar */,
 				0F7071491E14912F004D0A04 /* NewUser */,
 				0F5B16A91E0886A30073F806 /* Feed */,
 				0F5B16A81E0886970073F806 /* NewSong */,
@@ -214,6 +217,14 @@
 				0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		0F6934741E60EAE000E0D586 /* Custom Tool Bar */ = {
+			isa = PBXGroup;
+			children = (
+				0F6934751E60EB3000E0D586 /* CustomTabBarView.swift */,
+			);
+			name = "Custom Tool Bar";
 			sourceTree = "<group>";
 		};
 		0F7071491E14912F004D0A04 /* NewUser */ = {
@@ -351,6 +362,7 @@
 				0F17DB5B1DEC192F007A73EB /* DMComment.swift in Sources */,
 				0F0A1ABC1DF77940007DCC8A /* NewSongTableViewController.swift in Sources */,
 				0F7FEB881E31CB3600884B6C /* AllEmojis.swift in Sources */,
+				0F6934761E60EB3000E0D586 /* CustomTabBarView.swift in Sources */,
 				0F17DB511DEC0E65007A73EB /* DMAlbum.swift in Sources */,
 				0F0A1ABE1DF77D3C007DCC8A /* ItunesSearchTableViewController.swift in Sources */,
 				0F7FEB861E31C6D900884B6C /* EchoCollectionViewCell.swift in Sources */,
