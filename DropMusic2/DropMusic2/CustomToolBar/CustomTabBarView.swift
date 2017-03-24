@@ -8,35 +8,24 @@
 
 import UIKit
 
+protocol CustomTabBarViewDelegate: class {
+    func tabBarButtonTapped(index: Int)
+}
+
 class CustomTabBarView: UIView {
-
-    var imageView0 = UIImageView()
-    var imageView1 = UIImageView()
-    var imageView2 = UIImageView()
-    var imageView3 = UIImageView()
-    var arrayOfImageViews = [UIImageView]()
     
-    var button0 = UIButton()
-    var button1 = UIButton()
-    var button2 = UIButton()
-    var button3 = UIButton()
+    @IBOutlet weak var button0: UIButton!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    
+    weak var delegate: CustomTabBarViewDelegate?
 
-    override init(frame: CGRect){
-        super.init(frame: frame)
-        
-        button0.tag = 0
-        button1.tag = 1
-        button2.tag = 2
-        button3.tag = 3
+    
+    func select(index: Int){
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func selectIndex(index: Int){
-        //Set all to defaults (unselected)
-        imageView0.tintColor = UIColor.white
-        
+    @IBAction func didTapButton(sender: UIButton){
+        delegate?.tabBarButtonTapped(index: sender.tag)
     }
 }

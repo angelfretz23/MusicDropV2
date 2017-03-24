@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F0A1AAA1DF6352C007DCC8A /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AA91DF6352C007DCC8A /* FeedTableViewCell.swift */; };
-		0F0A1AAF1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AAB1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard */; };
+		0F0A1AAF1DF63591007DCC8A /* CustomTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AAB1DF63591007DCC8A /* CustomTabBar.storyboard */; };
 		0F0A1AB21DF63607007DCC8A /* DMPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A1AB11DF63607007DCC8A /* DMPost.swift */; };
 		0F0A1AB81DF660BD007DCC8A /* MapViewStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AB71DF660BD007DCC8A /* MapViewStoryBoard.storyboard */; };
 		0F0A1ABA1DF67184007DCC8A /* ProfileStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0A1AB91DF67184007DCC8A /* ProfileStoryBoard.storyboard */; };
@@ -38,6 +38,7 @@
 		0F5B16A71E0870210073F806 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16A61E0870210073F806 /* UserController.swift */; };
 		0F5B16AC1E0886E30073F806 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */; };
 		0F6934761E60EB3000E0D586 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6934751E60EB3000E0D586 /* CustomTabBarView.swift */; };
+		0F6934781E610FAB00E0D586 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6934771E610FAB00E0D586 /* CustomTabBarController.swift */; };
 		0F70714B1E14914F004D0A04 /* NewUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */; };
 		0F7FEB861E31C6D900884B6C /* EchoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FEB851E31C6D900884B6C /* EchoCollectionViewCell.swift */; };
 		0F7FEB881E31CB3600884B6C /* AllEmojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FEB871E31CB3600884B6C /* AllEmojis.swift */; };
@@ -51,7 +52,7 @@
 
 /* Begin PBXFileReference section */
 		0F0A1AA91DF6352C007DCC8A /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
-		0F0A1AAC1DF63591007DCC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DropMusic2/Base.lproj/CustomTabBarStroyBoard.storyboard; sourceTree = "<group>"; };
+		0F0A1AAC1DF63591007DCC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DropMusic2/Base.lproj/CustomTabBar.storyboard; sourceTree = "<group>"; };
 		0F0A1AB11DF63607007DCC8A /* DMPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPost.swift; sourceTree = "<group>"; };
 		0F0A1AB71DF660BD007DCC8A /* MapViewStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewStoryBoard.storyboard; sourceTree = "<group>"; };
 		0F0A1AB91DF67184007DCC8A /* ProfileStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryBoard.storyboard; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		0F5B16A61E0870210073F806 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		0F5B16AB1E0886E30073F806 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		0F6934751E60EB3000E0D586 /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTabBarView.swift; path = CustomToolBar/CustomTabBarView.swift; sourceTree = "<group>"; };
+		0F6934771E610FAB00E0D586 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTabBarController.swift; path = CustomToolBar/CustomTabBarController.swift; sourceTree = "<group>"; };
 		0F70714A1E14914F004D0A04 /* NewUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserTableViewController.swift; sourceTree = "<group>"; };
 		0F7FEB851E31C6D900884B6C /* EchoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F7FEB871E31CB3600884B6C /* AllEmojis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllEmojis.swift; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				694C91641E0C7B730055486F /* NewUserStoryBoard.storyboard */,
-				0F0A1AAB1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard */,
+				0F0A1AAB1DF63591007DCC8A /* CustomTabBar.storyboard */,
 				0FDCC5341DEAEED800B99359 /* FeedStoryBoard.storyboard */,
 				0F0A1AD11DF8CB51007DCC8A /* NewSongStoryBoard.storyboard */,
 				0F0A1AB71DF660BD007DCC8A /* MapViewStoryBoard.storyboard */,
@@ -222,6 +224,7 @@
 		0F6934741E60EAE000E0D586 /* Custom Tool Bar */ = {
 			isa = PBXGroup;
 			children = (
+				0F6934771E610FAB00E0D586 /* CustomTabBarController.swift */,
 				0F6934751E60EB3000E0D586 /* CustomTabBarView.swift */,
 			);
 			name = "Custom Tool Bar";
@@ -325,7 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0A1AAF1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard in Resources */,
+				0F0A1AAF1DF63591007DCC8A /* CustomTabBar.storyboard in Resources */,
 				0F0A1ABA1DF67184007DCC8A /* ProfileStoryBoard.storyboard in Resources */,
 				0FDCC5361DEAEED800B99359 /* FeedStoryBoard.storyboard in Resources */,
 				0FDCC5291DEAC9C300B99359 /* LaunchScreen.storyboard in Resources */,
@@ -348,6 +351,7 @@
 				0F5B16A11DFF72A00073F806 /* PostController.swift in Sources */,
 				0F0A1AB21DF63607007DCC8A /* DMPost.swift in Sources */,
 				0F17DB551DEC0EBF007A73EB /* DMMediaItem.swift in Sources */,
+				0F6934781E610FAB00E0D586 /* CustomTabBarController.swift in Sources */,
 				0F17DB571DEC1689007A73EB /* DMEcho.swift in Sources */,
 				0F0A1AD41DF93EA4007DCC8A /* AlbumDetailViewController.swift in Sources */,
 				0F5B16A51DFFCB000073F806 /* PhoneUserController.swift in Sources */,
@@ -381,12 +385,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0F0A1AAB1DF63591007DCC8A /* CustomTabBarStroyBoard.storyboard */ = {
+		0F0A1AAB1DF63591007DCC8A /* CustomTabBar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0F0A1AAC1DF63591007DCC8A /* Base */,
 			);
-			name = CustomTabBarStroyBoard.storyboard;
+			name = CustomTabBar.storyboard;
 			path = ..;
 			sourceTree = "<group>";
 		};
