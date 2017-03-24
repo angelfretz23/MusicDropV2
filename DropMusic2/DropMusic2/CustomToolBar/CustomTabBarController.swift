@@ -10,7 +10,7 @@ import UIKit
 
 class CustomTabBarController: UITabBarController, CustomTabBarViewDelegate {
     
-    var tabView: CustomTabBarView!
+    @IBOutlet weak var tabView: CustomTabBarView!
     
     override var selectedIndex: Int{
         didSet{
